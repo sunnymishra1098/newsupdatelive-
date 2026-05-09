@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live News TV</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+    }
+
+    /* Top Header */
+    header{
+      background:red;
+      padding:15px;
+      text-align:center;
+      font-size:30px;
+      font-weight:bold;
+      letter-spacing:2px;
+    }
+
+    /* Breaking News */
+    .breaking{
+      background:#000;
+      color:yellow;
+      padding:10px;
+      overflow:hidden;
+      white-space:nowrap;
+    }
+
+    .breaking span{
+      display:inline-block;
+      padding-left:100%;
+      animation:move 12s linear infinite;
+      font-size:18px;
+    }
+
+    @keyframes move{
+      0%{
+        transform:translateX(0);
+      }
+      100%{
+        transform:translateX(-100%);
+      }
+    }
+
+    /* Main Video Section */
+    .container{
+      width:90%;
+      margin:auto;
+      margin-top:20px;
+    }
+
+    .live-title{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#ff4444;
+    }
+
+    iframe{
+      width:100%;
+      height:300px;
+      border:none;
+      border-radius:12px;
+      box-shadow:0 0 20px rgba(255,0,0,0.5);
+    }
+
+    /* News Cards */
+    .news-section{
+      margin-top:30px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#1e1e1e;
+      padding:15px;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:scale(1.03);
+    }
+
+    .card img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+    }
+
+    footer{
+      margin-top:30px;
+      background:#000;
+      text-align:center;
+      padding:15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    NEWS 70 INDIA
+  </header>
+
+  <!-- Breaking News -->
+  <div class="breaking">
+    <span>
+      🔴 Breaking News: Welcome to Live News Channel Website
+    </span>
+  </div>
+
+  <!-- Live Video -->
+  <div class="container">
+
+    <h2 class="live-title">
+      🔴 LIVE NEWS
+    </h2>
+
+    <!-- sony set Live Stream -->
+    <iframe 
+      src="https://www.youtube.com/embed/Nq2wYlWFucg?si=1lZSYgtD70j__xyL""
+      allowfullscreen>
+    </iframe>
+    
+     <!-- YouTube Live Stream -->
+    <iframe 
+      src="https://www.youtube.com/embed/PNf-Y_u2nO4?si=X9M3Dj9Sn3al0eR0""
+      allowfullscreen>
+    </iframe>
+
+    <!-- News Section -->
+    <div class="news-section">
+
+      <div class="card">
+        <img src="https://picsum.photos/400/250?1">
+        <h3>Breaking News Headline</h3>
+        <p>Latest news update will appear here...</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/250?2">
+        <h3>Political Update</h3>
+        <p>Political news and live updates...</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/400/250?3">
+        <h3>Sports News</h3>
+        <p>Cricket and football updates...</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 NEWS 70 INDIA
+  </footer>
+
+</body>
+</html>
